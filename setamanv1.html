@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Summary DEV</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+    body {
+      background: linear-gradient(0deg, #1b1c30, #1b1c30),
+        linear-gradient(0deg, #ffffff, #ffffff);
+    }
+    .card {
+      position: relative;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(27, 33, 41, 0) 0%, #202d3c 100%);
+      color: white;
+      padding: 6px;
+    }
+    .card-border {
+      border-radius: 8px;
+      border: 1px solid #393a4e;
+    }
+    .tops {
+      position: absolute;
+      top: -15px;
+      font-size: 12px;
+      background: #62b365;
+      border-radius: 4px;
+      color: #1b1c30;
+    }
+    .topout {
+      font-size: 12px;
+      background: #62b365;
+      border-radius: 4px;
+      color: #1b1c30;
+    }
+    .card-inner {
+      border-radius: 16px;
+      border: 1px solid #90be6d;
+      background: linear-gradient(
+        180deg,
+        rgba(76, 128, 103, 0.1) 0%,
+        rgba(19, 53, 20, 0.8) 100%
+      );
+    }
+    .textin {
+      font-size: 12px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+  />
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script
+      nonce="undefined"
+      src="https://cdn.zingchart.com/zingchart.min.js"
+    ></script>
+
+    <header class="p-3 shadow">
+      <div class="d-flex align-items-center">
+        <div class="me-3">logo</div>
+        <div class="me-3">logo</div>
+        <div>
+          <h3 class="fw-semibold">
+            Sejuta Tanaman Pangan Cegah Inflasi Kota Tasikmalaya
+          </h3>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container-fluid">
+        <div class="row mt-3 g-3">
+          <!-- data 1 -->
+          <div class="col-md-6">
+            <div class="card card-border">
+              <div class="tops py-1 px-4 fw-bold">
+                Data Semai & Tanaman Per Kecamatan
+              </div>
+              <div class="card-body">
+                <div class="row my-3">
+                  <div class="col-md-4">
+                    <!-- data terbanyak -->
+                    <div class="card card-inner shadow mb-4">
+                      <div class="tops py-1 px-4 fw-bold">Data Terbanyak</div>
+                      <div class="card-body">
+                        <div class="row g-3 textin">
+                          <div class="col-md-12">
+                            <div class="row g-1">
+                              <div class="col-md-12">Data Semai:</div>
+                              <div class="col-md-6 border-end border-white">
+                                Bungursari
+                              </div>
+                              <div class="col-md-6 fw-bold ps-3">28071</div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="row g-1">
+                              <div class="col-md-12">Data Taban:</div>
+                              <div class="col-md-6 border-end border-white">
+                                Bungursari
+                              </div>
+                              <div class="col-md-6 fw-bold ps-3">28071</div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="row g-1">
+                              <div class="col-md-12">Data Panen:</div>
+                              <div class="col-md-6 border-end border-white">
+                                Bungursari
+                              </div>
+                              <div class="col-md-6 fw-bold ps-3">28071</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- data tersedikit -->
+                    <div class="card card-inner shadow">
+                      <div class="tops py-1 px-4 fw-bold">Data Terbanyak</div>
+                      <div class="card-body">
+                        <div class="row g-3 textin">
+                          <div class="col-md-12">
+                            <div class="row g-1">
+                              <div class="col-md-12">Data Semai:</div>
+                              <div class="col-md-6 border-end border-white">
+                                Bungursari
+                              </div>
+                              <div class="col-md-6 fw-bold ps-3">28071</div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="row g-1">
+                              <div class="col-md-12">Data Taban:</div>
+                              <div class="col-md-6 border-end border-white">
+                                Bungursari
+                              </div>
+                              <div class="col-md-6 fw-bold ps-3">28071</div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="row g-1">
+                              <div class="col-md-12">Data Panen:</div>
+                              <div class="col-md-6 border-end border-white">
+                                Bungursari
+                              </div>
+                              <div class="col-md-6 fw-bold ps-3">28071</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card card-inner shadow" style="height: 400px">
+                      <div class="card-body">
+                        <!-- CHART CONTAINER -->
+                        <div>
+                          <canvas id="per"></canvas>
+                        </div>
+
+                        <script>
+                          const pr = document.getElementById("per");
+
+                          new Chart(pr, {
+                            type: "bar",
+                            data: {
+                              labels: [
+                                "Red",
+                                "Blue",
+                                "Yellow",
+                                "Green",
+                                "Purple",
+                                "Orange",
+                                "Orange",
+                                "Orange",
+                                "Orange",
+                                "Orangse",
+                              ],
+                              datasets: [
+                                {
+                                  label: "s",
+                                  data: [12, 19, 3, 5, 2, 3, 3, 5, 7, 2],
+                                  borderWidth: 1,
+                                  backgroundColor: "#57AFA9",
+                                },
+                                {
+                                  label: "s",
+                                  data: [12, 19, 3, 5, 2, 3, 3, 5, 7, 2],
+                                  borderWidth: 1,
+                                  backgroundColor: "#EE63A1",
+                                },
+                                {
+                                  label: "s",
+                                  data: [12, 19, 3, 5, 2, 3, 3, 5, 7, 2],
+                                  borderWidth: 1,
+                                  backgroundColor: "#FFC56E",
+                                },
+                              ],
+                            },
+                            options: {
+                              scales: {
+                                x: {
+                                  beginAtZero: true,
+                                },
+                              },
+                              indexAxis: "y",
+                            },
+                          });
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- data 2 -->
+          <div class="col-md-4">
+            <div class="card card-border">
+              <div class="tops py-1 px-4 fw-bold">
+                Data Akumulasi Komoditas Tanam Terbanyak
+              </div>
+              <div class="card-body">
+                <div class="row g-2">
+                  <!-- 1 -->
+                  <div class="col-md-12">
+                    <div class="card shadow">
+                      <div class="card-body">
+                        <div class="row g-1 textin">
+                          <div class="col-md-2">icons</div>
+                          <div class="col-md-10">
+                            <small>
+                              Kangkung
+                              <br />
+                              <span class="fw-bold">21443</span>
+                            </small>
+                            <div class="row g-1 align-items-center">
+                              <div class="col-md-12">Komoditas Kec</div>
+                              <div class="col-md-6 border-end border-white">
+                                Mangkubumi
+                              </div>
+                              <div class="col-md-6 ps-2 fw-bold">13120</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 1 -->
+                  <div class="col-md-12">
+                    <div class="card shadow">
+                      <div class="card-body">
+                        <div class="row g-1 textin">
+                          <div class="col-md-2">icons</div>
+                          <div class="col-md-10">
+                            <small>
+                              Kangkung
+                              <br />
+                              <span class="fw-bold">21443</span>
+                            </small>
+                            <div class="row g-1 align-items-center">
+                              <div class="col-md-12">Komoditas Kec</div>
+                              <div class="col-md-6 border-end border-white">
+                                Mangkubumi
+                              </div>
+                              <div class="col-md-6 ps-2 fw-bold">13120</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 1 -->
+                  <div class="col-md-12">
+                    <div class="card shadow">
+                      <div class="card-body">
+                        <div class="row g-1 textin">
+                          <div class="col-md-2">icons</div>
+                          <div class="col-md-10">
+                            <small>
+                              Kangkung
+                              <br />
+                              <span class="fw-bold">21443</span>
+                            </small>
+                            <div class="row g-1 align-items-center">
+                              <div class="col-md-12">Komoditas Kec</div>
+                              <div class="col-md-6 border-end border-white">
+                                Mangkubumi
+                              </div>
+                              <div class="col-md-6 ps-2 fw-bold">13120</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 1 -->
+                  <div class="col-md-12">
+                    <div class="card shadow">
+                      <div class="card-body">
+                        <div class="row g-1 textin">
+                          <div class="col-md-2">icons</div>
+                          <div class="col-md-10">
+                            <small>
+                              Kangkung
+                              <br />
+                              <span class="fw-bold">21443</span>
+                            </small>
+                            <div class="row g-1 align-items-center">
+                              <div class="col-md-12">Komoditas Kec</div>
+                              <div class="col-md-6 border-end border-white">
+                                Mangkubumi
+                              </div>
+                              <div class="col-md-6 ps-2 fw-bold">13120</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 1 -->
+                  <div class="col-md-12">
+                    <div class="card shadow">
+                      <div class="card-body">
+                        <div class="row g-1 textin">
+                          <div class="col-md-2">icons</div>
+                          <div class="col-md-10">
+                            <small>
+                              Kangkung
+                              <br />
+                              <span class="fw-bold">21443</span>
+                            </small>
+                            <div class="row g-1 align-items-center">
+                              <div class="col-md-12">Komoditas Kec</div>
+                              <div class="col-md-6 border-end border-white">
+                                Mangkubumi
+                              </div>
+                              <div class="col-md-6 ps-2 fw-bold">13120</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 1 -->
+                  <div class="col-md-12">
+                    <div class="card shadow">
+                      <div class="card-body">
+                        <div class="row g-1 textin">
+                          <div class="col-md-2">icons</div>
+                          <div class="col-md-10">
+                            <small>
+                              Kangkung
+                              <br />
+                              <span class="fw-bold">21443</span>
+                            </small>
+                            <div class="row g-1 align-items-center">
+                              <div class="col-md-12">Komoditas Kec</div>
+                              <div class="col-md-6 border-end border-white">
+                                Mangkubumi
+                              </div>
+                              <div class="col-md-6 ps-2 fw-bold">13120</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- data 3 -->
+          <div class="col-md-2">
+            <div class="card card-border">
+              <div class="tops py-1 px-4 fw-bold">Data Panen Komoditas</div>
+              <div class="card-body">
+                <div class="row g-2">
+                  <div class="col-md-12">
+                    <div class="card shadow">
+                      <div class="card-body">
+                        <div class="d-flex textin">
+                          <div class="me-2">icons</div>
+                          <div>
+                            Kangkung <br />
+                            <span class="fw-semibold">1.477</span> Kg
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
