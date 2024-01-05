@@ -11,60 +11,8 @@
       crossorigin="anonymous"
     />
   </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      color: white;
-    }
-    body {
-      background: linear-gradient(0deg, #1b1c30, #1b1c30),
-        linear-gradient(0deg, #ffffff, #ffffff);
-      position: relative;
-    }
-    header {
-      background-image: url("./title-eksekutif.svg");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    .card {
-      position: relative;
-      border-radius: 12px;
-      background: linear-gradient(180deg, rgba(27, 33, 41, 0) 0%, #202d3c 100%);
-      color: white;
-      padding: 6px;
-    }
-    .card-border {
-      border-radius: 8px;
-      border: 1px solid #393a4e;
-    }
-    .tops {
-      position: absolute;
-      top: -15px;
-      font-size: 12px;
-      background: #62b365;
-      border-radius: 4px;
-      color: #1b1c30;
-    }
-    .topout {
-      font-size: 12px;
-      background: #62b365;
-      border-radius: 4px;
-      color: #1b1c30;
-    }
-    .card-inner {
-      border-radius: 16px;
-      border: 1px solid #90be6d;
-      background: linear-gradient(
-        180deg,
-        rgba(76, 128, 103, 0.1) 0%,
-        rgba(19, 53, 20, 0.8) 100%
-      );
-    }
-    .textin {
-      font-size: 12px;
-    }
-  </style>
+    <link rel="stylesheet" href="style.css">
+
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   <link
     rel="stylesheet"
@@ -76,6 +24,13 @@
     src="https://cdn.zingchart.com/zingchart.min.js"
   ></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+   <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <body>
     <header class="p-3 shadow">
       <div class="d-flex align-items-center">
@@ -89,634 +44,388 @@
       </div>
     </header>
 
-    <main>
-      <div class="container-fluid">
+   <main class="my-4">
+    <div class="container-fluid">
         <div class="row mt-3 g-1">
-          <!-- data 1 -->
-          <div class="col-md-7">
-            <div class="card card-border">
-              <div class="tops py-1 px-4 fw-bold">
-                Data Semai & Tanaman Per Kecamatan
-              </div>
-              <div class="card-body">
-                <div class="row my-3 g-2">
-                  <div class="col-md-4">
-                    <!-- data terbanyak -->
-                    <div class="card card-inner shadow mb-4">
-                      <div class="tops py-1 px-4 fw-bold">Data Terbanyak</div>
-                      <div class="card-body">
-                        <div class="row g-3 textin">
-                          <div class="col-md-12">
-                            <div class="row g-1">
-                              <div class="col-md-12">Data Semai:</div>
-                              <div
-                                class="col-6 border-end border-white fw-medium"
-                                style="font-size: 14px"
-                              >
-                                Mangkubumi
-                              </div>
-                              <div
-                                class="col-6 fw-bold ps-3"
-                                style="font-size: 16px"
-                              >
-                                28071
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="row g-1">
-                              <div class="col-md-12">Data Tanam:</div>
-                              <div
-                                class="col-6 border-end border-white fw-medium"
-                                style="font-size: 14px"
-                              >
-                                Mangkubumi
-                              </div>
-                              <div
-                                class="col-6 fw-bold ps-3"
-                                style="font-size: 16px"
-                              >
-                                28071
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="row g-1">
-                              <div class="col-md-12">Data Panen:</div>
-                              <div
-                                class="col-6 border-end border-white fw-medium"
-                                style="font-size: 14px"
-                              >
-                                Mangkubumi
-                              </div>
-                              <div
-                                class="col-6 fw-bold ps-3"
-                                style="font-size: 16px"
-                              >
-                                28071
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+            <!-- data 1 -->
+            <div class="col-md-7">
+                <div class="card card-border shadow">
+                    <div class="tops bgtops-setaman py-1 px-4 fw-bold">
+                        Data Semai & Tanaman Per Kecamatan
                     </div>
-                    <!-- data tersedikit -->
-                    <div class="card card-inner shadow">
-                      <div class="tops py-1 px-4 fw-bold">Data Terbanyak</div>
-                      <div class="card-body">
-                        <div class="row g-3 textin">
-                          <div class="col-md-12">
-                            <div class="row g-1">
-                              <div class="col-md-12">Data Semai:</div>
-                              <div
-                                class="col-6 border-end border-white fw-medium"
-                                style="font-size: 14px"
-                              >
-                                Mangkubumi
-                              </div>
-                              <div
-                                class="col-6 fw-bold ps-3"
-                                style="font-size: 16px"
-                              >
-                                28071
-                              </div>
+                    <div class="card-body">
+                        <div class="row my-3 g-2">
+                            <div class="col-md-4">
+                                <!-- data pencapaian -->
+                                <div class="card card-inner shadow mb-4">
+                                    <div class="tops bgtops-setaman py-1 px-4 fw-bold">Persentase Target 1jt Tanaman</div>
+                                    <div class="card-body">
+                                        <div class="row g-2 textin">
+                                            <div class="col-md-12">
+                                                <div class="d-flex justify-content-between align-items-center w-100">
+                                                    <p class="fw-bold fs-5">Penyemaian</p>
+                                                    <p>28282828</p>
+                                                </div>
+                                                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%">75%</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="d-flex justify-content-between align-items-center w-100">
+                                                    <p class="fw-bold fs-5">Penanaman</p>
+                                                    <p>28282828</p>
+                                                </div>
+                                                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%">75%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- data terbanyak -->
+                                <div class="card card-inner shadow">
+                                    <div class="tops bgtops-setaman py-1 px-4 fw-bold">Data Terbanyak</div>
+                                    <div class="card-body">
+                                        <div class="row g-1 textin">
+                                            <div class="col-md-12">
+                                                <div class="row g-1">
+                                                    <div class="col-md-12">Data Semai:</div>
+                                                    <div class="col-md-12">
+                                                        <div class="d-flex justify-content-between align-items-center w-100">
+                                                            <p class=" fw-medium" style="font-size: 14px">
+                                                                Mangkubumi</p>
+                                                            <p class="fw-bold ps-3" style="font-size: 16px">28071</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="row g-1">
+                                                    <div class="col-md-12">Data Tanam:</div>
+                                                    <div class="col-md-12">
+                                                        <div class="d-flex justify-content-between align-items-center w-100">
+                                                            <p class=" fw-medium" style="font-size: 14px">
+                                                                Mangkubumi</p>
+                                                            <p class="fw-bold ps-3" style="font-size: 16px">28071</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="row g-1">
+                                                    <div class="col-md-12">Data Panen:</div>
+                                                    <div class="col-md-12">
+                                                        <div class="d-flex justify-content-between align-items-center w-100">
+                                                            <p class=" fw-medium" style="font-size: 14px">
+                                                                Mangkubumi</p>
+                                                            <p class="fw-bold ps-3" style="font-size: 16px">28071</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="row g-1">
-                              <div class="col-md-12">Data Tanam:</div>
-                              <div
-                                class="col-6 border-end border-white fw-medium"
-                                style="font-size: 14px"
-                              >
-                                Mangkubumi
-                              </div>
-                              <div
-                                class="col-6 fw-bold ps-3"
-                                style="font-size: 16px"
-                              >
-                                28071
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="row g-1">
-                              <div class="col-md-12">Data Panen:</div>
-                              <div
-                                class="col-6 border-end border-white fw-medium"
-                                style="font-size: 14px"
-                              >
-                                Mangkubumi
-                              </div>
-                              <div
-                                class="col-6 fw-bold ps-3"
-                                style="font-size: 16px"
-                              >
-                                28071
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card card-inner shadow">
-                      <div class="card-body">
-                        <!-- CHART CONTAINER -->
-                        <div>
-                          <div id="chart"></div>
-                        </div>
+                            <div class="col-md-8">
+                                <div class="card card-inner shadow">
+                                    <div class="card-body">
+                                        <!-- CHART CONTAINER -->
+                                        <div>
+                                            <div id="chart"></div>
+                                        </div>
 
-                        <script>
-                          var options = {
-                            chart: {
-                              foreColor: "#ffffff",
-                              type: "bar",
-                              height: 600,
-                              toolbar: {
-                                show: true,
-                              },
-                            },
-                            dataLabels: {
-                              enabled: true,
-                            },
-                            plotOptions: {
-                              bar: {
-                                barHeight: "100%",
-                                horizontal: true,
-                                dataLabels: {
-                                  position: "bottom",
-                                },
-                              },
-                            },
-                            colors: ["#57AFA9", "#FFC56E", "#EE63A1"],
-                            series: [
-                              {
-                                name: "Penyemaian",
-                                data: [10, 33, 55, 65, 22, 54, 23, 22, 14, 57],
-                              },
-                              {
-                                name: "Penanaman",
-                                data: [23, 24, 54, 66, 22, 54, 54, 23, 42, 75],
-                              },
-                              {
-                                name: "Panen",
-                                data: [22, 30, 45, 36, 22, 54, 34, 33, 44, 65],
-                              },
-                            ],
-                            xaxis: {
-                              categories: [
-                                "Data 1",
-                                "Data 2",
-                                "Data 3",
-                                "Data 4",
-                                "Data 5",
-                                "Data 6",
-                                "Data 7",
-                                "Data 8",
-                                "Data 9",
-                                "Data 10",
-                              ],
-                            },
-                            stroke: {
-                              show: true,
-                              width: 1,
-                              colors: ["#fff"],
-                            },
-                            tooltip: {
-                              theme: "dark",
-                              x: {
-                                show: false,
-                              },
-                              y: {
-                                title: {
-                                  formatter: function () {
-                                    return "";
-                                  },
-                                },
-                              },
-                            },
-                          };
+                                        <script>
+                                            var options = {
+                                                chart: {
+                                                    foreColor: "#ffffff",
+                                                    type: "bar",
+                                                    height: 450,
+                                                    toolbar: {
+                                                        show: true,
+                                                    },
+                                                },
+                                                dataLabels: {
+                                                    enabled: true,
+                                                },
+                                                plotOptions: {
+                                                    bar: {
+                                                        barHeight: "100%",
+                                                        horizontal: true,
+                                                        dataLabels: {
+                                                            position: "bottom",
+                                                        },
+                                                    },
+                                                },
+                                                colors: ["#57AFA9", "#FFC56E", "#EE63A1"],
+                                                series: [{
+                                                        name: "Penyemaian",
+                                                        data: [10, 33, 55, 65, 22],
+                                                    },
+                                                    {
+                                                        name: "Penanaman",
+                                                        data: [23, 24, 54, 66, 22],
+                                                    },
+                                                    {
+                                                        name: "Panen",
+                                                        data: [22, 30, 45, 36, 22],
+                                                    },
+                                                ],
+                                                xaxis: {
+                                                    categories: [
+                                                        "Data 1",
+                                                        "Data 2",
+                                                        "Data 3",
+                                                        "Data 4",
+                                                        "Data 5",
+                                                    ],
+                                                },
+                                                stroke: {
+                                                    show: true,
+                                                    width: 1,
+                                                    colors: ["#fff"],
+                                                },
+                                                tooltip: {
+                                                    theme: "dark",
+                                                    x: {
+                                                        show: false,
+                                                    },
+                                                    y: {
+                                                        title: {
+                                                            formatter: function() {
+                                                                return "";
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                            };
 
-                          var chart = new ApexCharts(
-                            document.querySelector("#chart"),
-                            options
-                          );
-                          chart.render();
-                        </script>
-                      </div>
+                                            var chart = new ApexCharts(
+                                                document.querySelector("#chart"),
+                                                options
+                                            );
+                                            chart.render();
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- data 2 -->
-          <div class="col-md-3">
-            <div class="card card-border">
-              <div class="tops py-1 px-4 fw-bold">
-                Data Akumulasi Komoditas Tanam Terbanyak
-              </div>
-              <div class="card-body">
-                <section
-                  class="splide"
-                  id="splide"
-                  aria-labelledby="carousel-heading"
-                >
-                  <div class="splide__track">
-                    <ul class="splide__list">
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-2">
-                                <img
-                                  src="./pin-selada-bokor.svg"
-                                  alt=""
-                                  class="w-100"
-                                />
-                              </div>
-                              <div class="col-10">
-                                <small>
-                                  <span style="font-size: 16px">Kangkung</span>
+            <!-- data 2 -->
+            <div class="col-md-3">
+                <div class="card card-border shadow">
+                    <div class="tops bgtops-setaman py-1 px-4 fw-bold">
+                        Data Komoditas Tanam Terbanyak
+                    </div>
+                    <div class="card-body">
+                        <section class="splide" id="splide" aria-labelledby="carousel-heading">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    
+                                        <li class="splide__slide">
+                                            <div class="card shadow">
+                                                <div class="card-body">
+                                                    <div class="row g-1 textin">
+                                                        <div class="col-2">
+                                                            <img src="pin-selada-bokor.svg" alt="" class="w-100" />
+                                                        </div>
+                                                        <div class="col-10">
+                                                            <small>
+                                                                <span style="font-size: 16px">Kangkung</span>
 
-                                  <br />
-                                  <span class="fw-bold" style="font-size: 20px"
-                                    >21443</span
-                                  >
-                                </small>
-                                <div class="row g-1 align-items-center">
-                                  <div class="col-md-12">
-                                    Komoditas Kecamatan
-                                  </div>
-                                  <div
-                                    class="col-6 border-end border-white fw-medium"
-                                    style="font-size: 14px"
-                                  >
-                                    Mangkubumi
-                                  </div>
-                                  <div
-                                    class="col-6 ps-2 fw-bold text-center"
-                                    style="font-size: 16px"
-                                  >
-                                    13120
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-2">
-                                <img
-                                  src="./pin-selada-bokor.svg"
-                                  alt=""
-                                  class="w-100"
-                                />
-                              </div>
-                              <div class="col-10">
-                                <small>
-                                  <span style="font-size: 16px">Kangkung</span>
+                                                                <br />
+                                                                <span class="fw-bold" style="font-size: 20px">21443</span>
+                                                            </small>
+                                                            <div class="row g-1 align-items-center">
+                                                                <div class="col-md-12">
+                                                                    Komoditas Kecamatan
+                                                                </div>
+                                                                <div class="col-6 border-end border-white fw-medium" style="font-size: 14px">
+                                                                    Mangkubumi
+                                                                </div>
+                                                                <div class="col-6 ps-2 fw-bold text-center" style="font-size: 16px">
+                                                                    13120
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <div class="card shadow">
+                                                <div class="card-body">
+                                                    <div class="row g-1 textin">
+                                                        <div class="col-2">
+                                                            <img src="pin-selada-bokor.svg" alt="" class="w-100" />
+                                                        </div>
+                                                        <div class="col-10">
+                                                            <small>
+                                                                <span style="font-size: 16px">Kangkung</span>
 
-                                  <br />
-                                  <span class="fw-bold" style="font-size: 20px"
-                                    >21443</span
-                                  >
-                                </small>
-                                <div class="row g-1 align-items-center">
-                                  <div class="col-md-12">
-                                    Komoditas Kecamatan
-                                  </div>
-                                  <div
-                                    class="col-6 border-end border-white fw-medium"
-                                    style="font-size: 14px"
-                                  >
-                                    Mangkubumi
-                                  </div>
-                                  <div
-                                    class="col-6 ps-2 fw-bold text-center"
-                                    style="font-size: 16px"
-                                  >
-                                    13120
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-2">
-                                <img
-                                  src="./pin-selada-bokor.svg"
-                                  alt=""
-                                  class="w-100"
-                                />
-                              </div>
-                              <div class="col-10">
-                                <small>
-                                  <span style="font-size: 16px">Kangkung</span>
+                                                                <br />
+                                                                <span class="fw-bold" style="font-size: 20px">21443</span>
+                                                            </small>
+                                                            <div class="row g-1 align-items-center">
+                                                                <div class="col-md-12">
+                                                                    Komoditas Kecamatan
+                                                                </div>
+                                                                <div class="col-6 border-end border-white fw-medium" style="font-size: 14px">
+                                                                    Mangkubumi
+                                                                </div>
+                                                                <div class="col-6 ps-2 fw-bold text-center" style="font-size: 16px">
+                                                                    13120
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <div class="card shadow">
+                                                <div class="card-body">
+                                                    <div class="row g-1 textin">
+                                                        <div class="col-2">
+                                                            <img src="pin-selada-bokor.svg" alt="" class="w-100" />
+                                                        </div>
+                                                        <div class="col-10">
+                                                            <small>
+                                                                <span style="font-size: 16px">Kangkung</span>
 
-                                  <br />
-                                  <span class="fw-bold" style="font-size: 20px"
-                                    >21443</span
-                                  >
-                                </small>
-                                <div class="row g-1 align-items-center">
-                                  <div class="col-md-12">
-                                    Komoditas Kecamatan
-                                  </div>
-                                  <div
-                                    class="col-6 border-end border-white fw-medium"
-                                    style="font-size: 14px"
-                                  >
-                                    Mangkubumi
-                                  </div>
-                                  <div
-                                    class="col-6 ps-2 fw-bold text-center"
-                                    style="font-size: 16px"
-                                  >
-                                    13120
-                                  </div>
-                                </div>
-                              </div>
+                                                                <br />
+                                                                <span class="fw-bold" style="font-size: 20px">21443</span>
+                                                            </small>
+                                                            <div class="row g-1 align-items-center">
+                                                                <div class="col-md-12">
+                                                                    Komoditas Kecamatan
+                                                                </div>
+                                                                <div class="col-6 border-end border-white fw-medium" style="font-size: 14px">
+                                                                    Mangkubumi
+                                                                </div>
+                                                                <div class="col-6 ps-2 fw-bold text-center" style="font-size: 16px">
+                                                                    13120
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    
+                                </ul>
                             </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-2">
-                                <img
-                                  src="./pin-selada-bokor.svg"
-                                  alt=""
-                                  class="w-100"
-                                />
-                              </div>
-                              <div class="col-10">
-                                <small>
-                                  <span style="font-size: 16px">Kangkung</span>
-
-                                  <br />
-                                  <span class="fw-bold" style="font-size: 20px"
-                                    >21443</span
-                                  >
-                                </small>
-                                <div class="row g-1 align-items-center">
-                                  <div class="col-md-12">
-                                    Komoditas Kecamatan
-                                  </div>
-                                  <div
-                                    class="col-6 border-end border-white fw-medium"
-                                    style="font-size: 14px"
-                                  >
-                                    Mangkubumi
-                                  </div>
-                                  <div
-                                    class="col-6 ps-2 fw-bold text-center"
-                                    style="font-size: 16px"
-                                  >
-                                    13120
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-2">
-                                <img
-                                  src="./pin-selada-bokor.svg"
-                                  alt=""
-                                  class="w-100"
-                                />
-                              </div>
-                              <div class="col-10">
-                                <small>
-                                  <span style="font-size: 16px">Kangkung</span>
-
-                                  <br />
-                                  <span class="fw-bold" style="font-size: 20px"
-                                    >21443</span
-                                  >
-                                </small>
-                                <div class="row g-1 align-items-center">
-                                  <div class="col-md-12">
-                                    Komoditas Kecamatan
-                                  </div>
-                                  <div
-                                    class="col-6 border-end border-white fw-medium"
-                                    style="font-size: 14px"
-                                  >
-                                    Mangkubumi
-                                  </div>
-                                  <div
-                                    class="col-6 ps-2 fw-bold text-center"
-                                    style="font-size: 16px"
-                                  >
-                                    13120
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </section>
-              </div>
+                        </section>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- data 3 -->
-          <div class="col-md-2">
-            <div class="card card-border">
-              <div class="tops py-1 px-4 fw-bold">Data Panen Komoditas</div>
-              <div class="card-body">
-                <section
-                  class="splide"
-                  id="splidee"
-                  aria-labelledby="carousel-heading"
-                >
-                  <div class="splide__track">
-                    <ul class="splide__list">
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-md-12">
-                                <center>
-                                  <img
-                                    src="./pin-selada-bokor.svg"
-                                    alt=""
-                                    class="w-25"
-                                  />
-                                </center>
-                              </div>
-                              <div class="col-md-12">
-                                <p class="text-center">
-                                  <span style="font-size: 20px">Kangkung</span>
+            <!-- data 3 -->
+            <div class="col-md-2">
+                <div class="card card-border shadow">
+                    <div class="tops bgtops-setaman py-1 px-4 fw-bold">Data Panen Komoditas</div>
+                    <div class="card-body">
+                        <section class="splide" id="splidee" aria-labelledby="carousel-heading">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    
+                                        <li class="splide__slide">
+                                            <div class="card shadow">
+                                                <div class="card-body">
+                                                    <div class="row g-1 textin">
+                                                        <div class="col-md-12">
+                                                            <center>
+                                                                <img src="pin-selada-bokor.svg" alt="" class="w-25" />
+                                                            </center>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <p class="text-center">
+                                                                <span style="font-size: 20px">Kangkung</span>
 
-                                  <br />
-                                  <span class="fw-bold fs-6">21443</span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-md-12">
-                                <center>
-                                  <img
-                                    src="./pin-selada-bokor.svg"
-                                    alt=""
-                                    class="w-25"
-                                  />
-                                </center>
-                              </div>
-                              <div class="col-md-12">
-                                <p class="text-center">
-                                  <span style="font-size: 20px">Kangkung</span>
+                                                                <br />
+                                                                <span class="fw-bold fs-6">21443</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <div class="card shadow">
+                                                <div class="card-body">
+                                                    <div class="row g-1 textin">
+                                                        <div class="col-md-12">
+                                                            <center>
+                                                                <img src="pin-selada-bokor.svg" alt="" class="w-25" />
+                                                            </center>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <p class="text-center">
+                                                                <span style="font-size: 20px">Kangkung</span>
 
-                                  <br />
-                                  <span class="fw-bold fs-6">21443</span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-md-12">
-                                <center>
-                                  <img
-                                    src="./pin-selada-bokor.svg"
-                                    alt=""
-                                    class="w-25"
-                                  />
-                                </center>
-                              </div>
-                              <div class="col-md-12">
-                                <p class="text-center">
-                                  <span style="font-size: 20px">Kangkung</span>
+                                                                <br />
+                                                                <span class="fw-bold fs-6">21443</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <div class="card shadow">
+                                                <div class="card-body">
+                                                    <div class="row g-1 textin">
+                                                        <div class="col-md-12">
+                                                            <center>
+                                                                <img src="pin-selada-bokor.svg" alt="" class="w-25" />
+                                                            </center>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <p class="text-center">
+                                                                <span style="font-size: 20px">Kangkung</span>
 
-                                  <br />
-                                  <span class="fw-bold fs-6">21443</span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-md-12">
-                                <center>
-                                  <img
-                                    src="./pin-selada-bokor.svg"
-                                    alt=""
-                                    class="w-25"
-                                  />
-                                </center>
-                              </div>
-                              <div class="col-md-12">
-                                <p class="text-center">
-                                  <span style="font-size: 20px">Kangkung</span>
+                                                                <br />
+                                                                <span class="fw-bold fs-6">21443</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="splide__slide">
+                                            <div class="card shadow">
+                                                <div class="card-body">
+                                                    <div class="row g-1 textin">
+                                                        <div class="col-md-12">
+                                                            <center>
+                                                                <img src="pin-selada-bokor.svg" alt="" class="w-25" />
+                                                            </center>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <p class="text-center">
+                                                                <span style="font-size: 20px">Kangkung</span>
 
-                                  <br />
-                                  <span class="fw-bold fs-6">21443</span>
-                                </p>
-                              </div>
+                                                                <br />
+                                                                <span class="fw-bold fs-6">21443</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                   
+                                </ul>
                             </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-md-12">
-                                <center>
-                                  <img
-                                    src="./pin-selada-bokor.svg"
-                                    alt=""
-                                    class="w-25"
-                                  />
-                                </center>
-                              </div>
-                              <div class="col-md-12">
-                                <p class="text-center">
-                                  <span style="font-size: 20px">Kangkung</span>
-
-                                  <br />
-                                  <span class="fw-bold fs-6">21443</span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </section>
-              </div>
+                        </section>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </main>
+    </div>
+</main>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var splide1 = new Splide("#splide", {
-          type: "loop",
-          perPage: 4,
-          perMove: 1,
-          direction: "ttb",
-          height: "40rem",
-          wheel: true,
-          arrows: false,
-          autoplay: "play",
-          pagination: false,
-        });
-        splide1.mount();
-        var splide2 = new Splide("#splidee", {
-          type: "loop",
-          perPage: 4,
-          perMove: 1,
-          direction: "ttb",
-          height: "40rem",
-          wheel: true,
-          arrows: false,
-          autoplay: "play",
-          pagination: false,
-        });
-        splide2.mount();
-      });
-    </script>
+   <script src="./main.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

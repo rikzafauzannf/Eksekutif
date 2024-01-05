@@ -11,69 +11,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      color: white;
-    }
-    body {
-      background: linear-gradient(0deg, #1b1c30, #1b1c30),
-        linear-gradient(0deg, #ffffff, #ffffff);
-      position: relative;
-    }
-    header {
-      background-image: url("./title-eksekutif.svg");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    .card {
-      position: relative;
-      border-radius: 12px;
-      background: linear-gradient(180deg, rgba(27, 33, 41, 0) 0%, #202d3c 100%);
-      color: white;
-      padding: 6px;
-    }
-    .card-border {
-      border-radius: 8px;
-      border: 1px solid #393a4e;
-    }
-    .tops {
-      position: absolute;
-      top: -15px;
-      font-size: 12px;
-      background: #62b365;
-      border-radius: 4px;
-      color: #1b1c30;
-    }
-    .topout {
-      font-size: 12px;
-      background: #62b365;
-      border-radius: 4px;
-      color: #1b1c30;
-    }
-    .card-inner {
-      border-radius: 16px;
-      border: 1px solid #90be6d;
-      background: linear-gradient(
-        180deg,
-        rgba(76, 128, 103, 0.1) 0%,
-        rgba(19, 53, 20, 0.8) 100%
-      );
-    }
-    .card-inner-goso {
-      border-radius: 12px;
-      border: 1px solid #736dbe;
-      background: linear-gradient(
-        180deg,
-        rgba(76, 81, 128, 0.1) 0%,
-        rgba(21, 19, 53, 0.8) 100%
-      );
-    }
-    .textin {
-      font-size: 12px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   <link
     rel="stylesheet"
@@ -85,6 +23,13 @@
     src="https://cdn.zingchart.com/zingchart.min.js"
   ></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+   <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <body>
     <header class="p-3 shadow">
       <div class="d-flex align-items-center">
@@ -96,274 +41,179 @@
       </div>
     </header>
 
-    <main class="my-4">
-      <div class="container-fluid">
-        <div class="row g-2">
-          <!-- data1 -->
-          <div class="col-md-5">
-            <div class="card card-border shadow">
-              <div class="tops py-1 px-4 fw-bold">Akumulasi Bantuan Bageur</div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="card card-inner-goso shadow">
-                      <div class="textin p-1">
-                        <p class="text-center">
-                          <span class="fs-6">Bantuan Tersalurkan</span>
-                          <br />
-                          <span class="fw-bold fs-5">28071</span>
-                        </p>
-                      </div>
-                    </div>
+   <main class="my-4">
+  <div class="container-fluid">
+    <div class="row g-2">
+      <!-- data1 -->
+      <div class="col-md-8">
+        <div class="card card-border shadow">
+          <div class="tops bgtops-bageur py-1 px-4 fw-bold">Akumulasi Bantuan Bageur</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card card-inner-goso">
+                  <div class="p-1 textin">
+                    <p class="text-center">
+                      <span class="fs-6">Bantuan Tersalurkan</span>
+                      <br />
+                      <span class="fw-bold fs-5">28071</span>
+                    </p>
                   </div>
-                  <div class="col-md-6">
-                    <div class="card card-inner-goso shadow">
-                      <div class="textin p-1">
-                        <p class="text-center">
-                          <span class="fs-6">Barang Tersalurkan</span>
-                          <br />
-                          <span class="fw-bold fs-5">28071</span>
-                        </p>
-                      </div>
-                    </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card card-inner-goso">
+                  <div class="p-1 textin">
+                    <p class="text-center">
+                      <span class="fs-6">Barang Tersalurkan</span>
+                      <br />
+                      <span class="fw-bold fs-5">28071</span>
+                    </p>
                   </div>
-                  <div class="col-md-12">
-                    <div class="card">
-                      <div class="card-body">
-                        <!-- CHART CONTAINER -->
-                        <div>
-                          <div id="chart"></div>
-                        </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <!-- CHART CONTAINER -->
+                    <div>
+                      <div id="chart"></div>
+                    </div>
 
-                        <script>
-                          var options = {
-                            chart: {
-                              foreColor: "#ffffff",
-                              type: "area",
-                              height: 500,
-                              toolbar: {
-                                show: true,
-                              },
-                            },
+                    <script>
+                      var options = {
+                        chart: {
+                          foreColor: "#ffffff",
+                          type: "area",
+                          height: 420,
+                          toolbar: {
+                            show: true,
+                          },
+                        },
+                        dataLabels: {
+                          enabled: true,
+                        },
+                        plotOptions: {
+                          bar: {
+                            barHeight: "100%",
+                            horizontal: true,
                             dataLabels: {
-                              enabled: true,
+                              position: "bottom",
                             },
-                            plotOptions: {
-                              bar: {
-                                barHeight: "100%",
-                                horizontal: true,
-                                dataLabels: {
-                                  position: "bottom",
-                                },
+                          },
+                        },
+                        colors: ["#57AFA9", "#F9C74F"],
+                        series: [{
+                            name: "Bantuan Tersalurkan",
+                            data: [10, 33, 55, 65, 22, 54, 23, 22, 14, 57],
+                          },
+                          {
+                            name: "Barang Tersalurkan",
+                            data: [23, 24, 54, 66, 22, 54, 54, 23, 42, 75],
+                          },
+                        ],
+                        xaxis: {
+                          categories: [
+                            "Data 1",
+                            "Data 2",
+                            "Data 3",
+                            "Data 4",
+                            "Data 5",
+                            "Data 6",
+                            "Data 7",
+                            "Data 8",
+                            "Data 9",
+                            "Data 10",
+                          ],
+                        },
+                        stroke: {
+                          show: true,
+                          width: 4,
+                          colors: ["#57AFA9", "#F9C74F"],
+                        },
+                        tooltip: {
+                          theme: "dark",
+                          x: {
+                            show: false,
+                          },
+                          y: {
+                            title: {
+                              formatter: function() {
+                                return "";
                               },
                             },
-                            colors: ["#57AFA9", "#F9C74F"],
-                            series: [
-                              {
-                                name: "Bantuan Tersalurkan",
-                                data: [10, 33, 55, 65, 22, 54, 23, 22, 14, 57],
-                              },
-                              {
-                                name: "Barang Tersalurkan",
-                                data: [23, 24, 54, 66, 22, 54, 54, 23, 42, 75],
-                              },
-                            ],
-                            xaxis: {
-                              categories: [
-                                "Data 1",
-                                "Data 2",
-                                "Data 3",
-                                "Data 4",
-                                "Data 5",
-                                "Data 6",
-                                "Data 7",
-                                "Data 8",
-                                "Data 9",
-                                "Data 10",
-                              ],
-                            },
-                            stroke: {
-                              show: true,
-                              width: 3,
-                              colors: ["#57AFA9", "#F9C74F"],
-                            },
-                            tooltip: {
-                              theme: "dark",
-                              x: {
-                                show: false,
-                              },
-                              y: {
-                                title: {
-                                  formatter: function () {
-                                    return "";
-                                  },
-                                },
-                              },
-                            },
-                          };
+                          },
+                        },
+                      };
 
-                          var chart = new ApexCharts(
-                            document.querySelector("#chart"),
-                            options
-                          );
-                          chart.render();
-                        </script>
-                      </div>
-                    </div>
+                      var chart = new ApexCharts(
+                        document.querySelector("#chart"),
+                        options
+                      );
+                      chart.render();
+                    </script>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- data2 -->
-          <div class="col-md-4">
-            <div class="card card-border shadow">
-              <div class="tops py-1 px-4 fw-bold">
-                Bantuan Tersalurkan Berdasarkan Lokasi
-              </div>
-              <div class="card-body">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126622.26510674809!2d108.15035201449113!3d-7.359974472024886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f56e5924c576f%3A0x301e8f1fc2f2500!2sKota%20Tasikmalaya%2C%20Kab.%20Tasikmalaya%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1704349912309!5m2!1sid!2sid"
-                  width="100%"
-                  height="600px"
-                  style="border: 0; border-radius: 4px"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </div>
+        </div>
+      </div>
+      <!-- data2 -->
+      <!-- <div class="col-md-4">
+        <div class="card card-border shadow">
+          <div class="tops bgtops-bageur py-1 px-4 fw-bold">
+            Bantuan Tersalurkan Berdasarkan Lokasi
           </div>
-          <!-- data3 -->
-          <div class="col-md-3">
-            <div class="card card-border shadow">
-              <div class="tops py-1 px-4 fw-bold">
-                Categori Barang Tersalurkan
+          <div class="card-body">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126622.26510674809!2d108.15035201449113!3d-7.359974472024886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f56e5924c576f%3A0x301e8f1fc2f2500!2sKota%20Tasikmalaya%2C%20Kab.%20Tasikmalaya%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1704349912309!5m2!1sid!2sid" width="100%" height="500px" style="border:0;border-radius: 4px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div> -->
+      <!-- data3 -->
+      <div class="col-md-4">
+        <div class="card card-border shadow">
+          <div class="tops bgtops-bageur py-1 px-4 fw-bold">
+            Categori Barang Tersalurkan
+          </div>
+          <div class="card-body">
+            <section class="splide" id="splideBageur" aria-labelledby="carousel-heading">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <?php
+                  for ($i = 1; $i <= 10; $i++) :
+                  ?>
+                    <li class="splide__slide">
+                      <div class="card shadow">
+                        <div class="card-body">
+                          <div class="row g-1 textin">
+
+                            <div class="col-md-12">
+                              <p class="text-center">
+                                <span style="font-size: 20px">Kebutuhan Dasar Pangan</span>
+
+                                <br />
+                                <span class="fw-bold fs-5">21443</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  <?php
+                  endfor;
+                  ?>
+                </ul>
               </div>
-              <div class="card-body">
-                <section
-                  class="splide"
-                  id="splidee"
-                  aria-labelledby="carousel-heading"
-                >
-                  <div class="splide__track">
-                    <ul class="splide__list">
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-md-12">
-                                <p class="text-center">
-                                  <span style="font-size: 20px"
-                                    >Alat Bantu Kusi Roda</span
-                                  >
-
-                                  <br />
-                                  <span class="fw-bold fs-5">21443</span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-md-12">
-                                <p class="text-center">
-                                  <span style="font-size: 20px"
-                                    >Alat Bantu Kusi Roda</span
-                                  >
-
-                                  <br />
-                                  <span class="fw-bold fs-5">21443</span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-md-12">
-                                <p class="text-center">
-                                  <span style="font-size: 20px"
-                                    >Alat Bantu Kusi Roda</span
-                                  >
-
-                                  <br />
-                                  <span class="fw-bold fs-5">21443</span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-md-12">
-                                <p class="text-center">
-                                  <span style="font-size: 20px"
-                                    >Alat Bantu Kusi Roda</span
-                                  >
-
-                                  <br />
-                                  <span class="fw-bold fs-5">21443</span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="splide__slide">
-                        <div class="card shadow">
-                          <div class="card-body">
-                            <div class="row g-1 textin">
-                              <div class="col-md-12">
-                                <p class="text-center">
-                                  <span style="font-size: 20px"
-                                    >Alat Bantu Kusi Roda</span
-                                  >
-
-                                  <br />
-                                  <span class="fw-bold fs-5">21443</span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </section>
-              </div>
-            </div>
+            </section>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </div>
+</main>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var splide1 = new Splide("#splidee", {
-          type: "loop",
-          perPage: 4,
-          perMove: 1,
-          direction: "ttb",
-          height: "40rem",
-          wheel: true,
-          arrows: false,
-          autoplay: "play",
-          pagination: false,
-        });
-        splide1.mount();
-      });
-    </script>
+   <script src="./main.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
